@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cool Project</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-app="app">
+    <div>hey!</div>
+    <div class="container">
+      <div ng-controller="LikeCounter">
+        <button  ng-click="addLike()">{{ count }} like{{ s }}</button>
+        <button  ng-click="minusLike()">Toggle</button>
+      </div>
+      <div>
+        Do i know you?
+      </div>
+    </div>
+    <!--    <input id="setbtn" type="button" value="set" ng-click="myVar='invisible'">
+        <input id="clearbtn" type="button" value="clear" ng-click="myVar=''"> -->
+
+<!--
+      </div>
+      <p>Put your name in the box to see instant updates!</p>
+      <div ng-controller="GreetController">
+        <input type="text" ng-model="name" />
+        <h3>Nice to meet you, {{ name }}!</h3>
+      </div>
+
+    </div> -->
+
+    <!-- <div class="modal is-active">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+
+      </div>
+      <button class="modal-close"></button>
+    </div> -->
+
+
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
