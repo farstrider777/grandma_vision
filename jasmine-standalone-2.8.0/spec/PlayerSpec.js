@@ -1,3 +1,10 @@
+describe("first tests", function() {
+  it("should pass simple test", function() {
+    expect(1).toEqual(1);
+  })
+})
+
+
 describe("Player", function() {
   var player;
   var song;
