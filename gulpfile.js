@@ -15,6 +15,10 @@ const gulp        = require('gulp'),
       watch       = require('gulp-watch'),
       browserSync = require('browser-sync').create();
 
+////added mocha require with var... gulp already declared as constant
+var mocha = require('gulp-mocha');
+//////
+
 // Function to handle errors.
 // Prevents Gulp from stopping.
 var handleError = function(err) {
@@ -46,6 +50,18 @@ gulp.task('browserify', () => {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./app/js'));
 });
+
+///////////here's where we added the gulptask for mocha///
+gulp.task('default', function() {
+  return gulp.src(['test/test-*.js'], { read: false })
+    .pipe(mocha({
+      reporter: 'spec',
+      globals: {
+        should: require('should')
+      }
+    }));
+});
+/////////////////////////////
 
 // Watches our .scss & .js files for change
 gulp.task('watch', () => {

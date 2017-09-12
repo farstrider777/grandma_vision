@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body ng-app="app">
+
+    <div ng-init="qty=1;cost=2">
+  <b>Invoice: can we add here</b>
+  <div>
+    Quantity: <input data-input="quantity" type="number" min="0" ng-model="qty">
+  </div>
+  <div>
+    Costs: <input data-input="cost" type="number" min="0" ng-model="cost">
+  </div>
+  <div>
+    <b>Total:</b> {{qty * cost | currency}}
+  </div>
+</div>
+
     <div>hey!</div>
     <div class="container">
       <div ng-controller="LikeCounter">

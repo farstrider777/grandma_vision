@@ -2,6 +2,7 @@
 import chai from 'chai';
 
 // Import Any Files to Test
+import likeCounter from "../src/js/controllers/counter.js";
 
 // Set Chai Constants
 const expect = chai.expect;
@@ -17,6 +18,13 @@ describe('Something We Want To Test', function () {
       expect(x).to.be.an.instanceof(Object);
     });
 
+  });
+
+  describe('testing value of like counter', function () {
+    it('should return the correct value', function () {
+      console.log("hi there");
+      console.log(likeCounter);
+    });
   });
 
 

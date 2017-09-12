@@ -1,9 +1,25 @@
+//import likeCounter from "../src/js/controllers/counter.js"
+//require("../src/js/controllers/counter.js")
+
 describe("first tests", function() {
+  //console.log(likeCounter())
+  var test;
+  test = new Dog();
   it("should pass simple test", function() {
-    expect(1).toEqual(1);
+    expect(test.says).toEqual('life is ruff');
   })
 })
 
+describe("test creation of fully featured grandma", function() {
+  var dot;
+  dot = new Grandma("dot", "www.bridge.com", "www.email.com");
+  it("should create a Grandma with all 3 properties", function() {
+    expect(dot.name).toEqual('dot');
+    expect(dot.link1).toEqual('www.bridge.com', 'www.email.com');
+  })
+});
+
+////////////
 
 describe("Player", function() {
   var player;
